@@ -24,7 +24,7 @@ export const formatDate = (date :Date): string => {
   let month = date.getMonth() + 1;
   let day = date.getDate();
 
-  return `${day}/${month}/${year}`;
+  return `${addZeroToDate(day)}/${addZeroToDate(month)}/${addZeroToDate(year)}`;
 }
 
-const addZeroToDate = (n: number)
+const addZeroToDate = (n: number): string => n < 10 ? `0${n}` : `${n}`;
